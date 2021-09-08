@@ -1,6 +1,31 @@
 #include "MicroBit.h"
 #include "Tests.h"
 
+
+
+void
+onButtonA(MicroBitEvent)
+{
+    uBit.display.print("Aa");
+}
+
+void
+onButtonB(MicroBitEvent)
+{
+    uBit.display.print("Bb");
+}
+
+void
+onButtonAB(MicroBitEvent)
+{
+    uBit.display.print("Cc");
+}
+
+void listenerRemoved(MicroBitListener *)
+{
+    DMESG("Listener deleted");
+}
+
 void
 button_test1()
 {
@@ -37,29 +62,6 @@ button_test2()
 
         uBit.sleep(100);
     }
-}
-
-void
-onButtonA(MicroBitEvent)
-{
-    uBit.display.print("Aa");
-}
-
-void
-onButtonB(MicroBitEvent)
-{
-    uBit.display.print("Bb");
-}
-
-void
-onButtonAB(MicroBitEvent)
-{
-    uBit.display.print("Cc");
-}
-
-void listenerRemoved(MicroBitListener *)
-{
-    DMESG("Listener deleted");
 }
 
 void
