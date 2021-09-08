@@ -27,16 +27,16 @@ void listenerRemoved(MicroBitListener *)
 }
 
 void
-button_test1()
+button_test1()//最原始的读写io口的方式
 {
     while(1)
     {
-        if (uBit.io.P5.getDigitalValue())
+        if (uBit.io.P5.getDigitalValue())//P5是左键
             uBit.display.image.setPixelValue(0,0,0);
         else
             uBit.display.image.setPixelValue(0,0,255);
 
-        if (uBit.io.P11.getDigitalValue())
+        if (uBit.io.P11.getDigitalValue())//P11是右键
             uBit.display.image.setPixelValue(4,0,0);
         else
             uBit.display.image.setPixelValue(4,0,255);
@@ -46,7 +46,7 @@ button_test1()
 }
 
 void
-button_test2()
+button_test2()//包装成按钮类的模式
 {
     while(1)
     {
@@ -65,7 +65,7 @@ button_test2()
 }
 
 void
-button_test3()
+button_test3()//事件监听的方式
 {
     uBit.messageBus.listen(DEVICE_ID_BUTTON_A, DEVICE_BUTTON_EVT_CLICK, onButtonA);
     uBit.messageBus.listen(DEVICE_ID_BUTTON_B, DEVICE_BUTTON_EVT_CLICK, onButtonB);
@@ -76,7 +76,7 @@ button_test3()
 }
 
 void
-button_test4()
+button_test4()//增加一个删除监听触发回调的例子
 {
     uBit.messageBus.setListenerDeletionCallback(listenerRemoved);
     
