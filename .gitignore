@@ -8,7 +8,6 @@ yotta_targets
 Makefile
 *.hex
 *.DS_Store
-.vscode
 *.uf2
 *.bin
 pxtapp

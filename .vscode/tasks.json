@@ -1,0 +1,72 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "D:/msys64/mingw64/bin/g++.exe",
+			"args": [
+			"-fdiagnostics-color=always",
+			"-g",
+			"${file}",
+		"-o",		
+		"${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe"
+		],
+		"options": {
+			"cwd": "D:/msys64/mingw64/bin"
+			},
+		"problemMatcher": [
+		"$gcc"
+		],
+		"group": {
+			"kind": "build",
+			"isDefault": true
+			},
+		"detail": "compiler: D:/msys64/mingw64/bin/g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: arm-none-eabi-gcc.exe build active file",
+			"command": "D:\\msys64\\mingw64\\bin\\arm-none-eabi-gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-I","${workspaceFolder}\\libraries\\codal-microbit-v2\\inc",
+				"-I","${workspaceFolder}\\libraries\\codal-microbit-v2\\inc\\bluetooth",
+				"-I","${workspaceFolder}\\libraries\\codal-microbit-v2\\inc\\compat",
+				"-I","${workspaceFolder}\\libraries\\codal-microbit-v2\\model",
+				"-I","${workspaceFolder}\\libraries\\codal-core\\inc\\core",
+				"-I","${workspaceFolder}\\libraries",
+				"-I","${workspaceFolder}\\libraries\\codal-core\\inc\\driver-models",
+				"-I","${workspaceFolder}\\libraries\\codal-core\\inc\\drivers",
+				"-I","${workspaceFolder}\\libraries\\codal-core\\inc\\streams",
+				"-I","${workspaceFolder}\\libraries\\codal-core\\inc\\types",
+				"-I","${workspaceFolder}\\libraries\\codal-microbit-nrf5sdk",
+				"-I","${workspaceFolder}\\libraries\\codal-nrf52\\nrfx",
+				"-I","${workspaceFolder}\\libraries\\codal-nrf52\\nrfx\\drivers",				
+				"-I","${workspaceFolder}\\libraries\\codal-nrf52\\nrfx\\hal",				
+				"-I","${workspaceFolder}\\libraries\\codal-nrf52\\nrfx\\mdk",				
+				"-I","${workspaceFolder}\\libraries\\codal-nrf52\\nrfx\\soc",				
+				"-I","${workspaceFolder}\\libraries\\codal-nrf52\\nrfx\\drivers\\include",
+				"-I","${workspaceFolder}\\libraries\\codal-nrf52\\nrfx\\templates\\nRF52833",
+				"-I","${workspaceFolder}\\libraries\\codal-nrf52\\inc",
+				"-I","${workspaceFolder}\\libraries\\codal-nrf52\\inc\\cmsis",
+				"-I","${workspaceFolder}\\utils\\cmake\\toolchains\\ARM_GCC",
+				"-g",
+				"${file}",
+				// "-o",
+				// "${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],			
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			// "group": {
+			// 	"kind": "build",
+			// 	"isDefault": true
+			// },
+			"detail": "compiler: D:\\msys64\\mingw64\\bin\\arm-none-eabi-gcc.exe"
+		}
+	]
+}

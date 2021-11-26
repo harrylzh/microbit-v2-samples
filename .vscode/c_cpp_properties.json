@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Arm",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/libraries/**",
+                "D:\\msys64\\mingw64\\arm-none-eabi\\include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.19041.0",
+            "intelliSenseMode": "windows-gcc-arm",
+            "compilerPath": "D:/msys64/mingw64/bin/arm-none-eabi-gcc.exe",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}
