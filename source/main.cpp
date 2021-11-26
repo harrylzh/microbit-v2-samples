@@ -2,11 +2,12 @@
 
 MicroBit uBit;
 
-int 
-main()
+int main()
 {
     uBit.init();
 
-    while(1)
+    while (1)
+    {
         uBit.display.scroll("HELLO WORLD!");
+    }
 }
